@@ -4,15 +4,15 @@ import { bootstrap } from "./bootstrap";
 const PORT = process.env.PORT || 3000;
 
 async function main() {
-    await bootstrap();
+  await bootstrap();
 
-    app.listen(PORT, () => {
-        console.log(`Servidor rodando na porta ${PORT}`);
-    });
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
 }
 
 main().catch((err) => {
-    console.error("Falha ao iniciar aplicação:", err);
-    process.exitCode = 1;
+  console.error("Falha ao iniciar aplicação:", err);
+  process.exitCode = 1;
 });
 

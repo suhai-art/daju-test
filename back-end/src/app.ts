@@ -1,5 +1,5 @@
 import express from "express";
-import { salesRoutes } from "./modules/sales/routes/salesRoutes";
+import salesRoutes from "./modules/transation/routes/transition.route";
 
 export const app = express();
 

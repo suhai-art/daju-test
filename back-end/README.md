@@ -26,3 +26,25 @@
    ```
 
 O servidor sobe por padrão na porta `3000` (ou na porta definida em `PORT`).
+
+## CSV to JSON map
+
+``` json
+{
+  "invoice": nr_dctoorigem,
+  "transacation": {
+    "sale": {
+      "product": cd_produto,
+      "company": cd_empresa,
+      "is_reversal": in_estorno == false,
+      "value": round
+    },
+    "refund": {
+      "product": cd_produto,
+      "company": cd_empresa,
+      "is_reversal": in_estorno == true,
+      "value": round
+    }
+  }
+}
+```
