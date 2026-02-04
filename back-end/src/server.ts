@@ -1,7 +1,7 @@
 import { app } from "./app";
 import { bootstrap } from "./bootstrap";
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 async function main() {
     await bootstrap();
