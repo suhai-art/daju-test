@@ -1,5 +1,5 @@
 import express from "express";
-import salesRoutes from "./modules/transation/routes/transition.route";
+import transationRoutes from "./modules/transation/routes/transation.route";
 
 export const app = express();
 
@@ -9,4 +9,4 @@ app.get("/", (req, res) => {
     res.json({ status: "ok" });
 });
 
-app.use("/sales", salesRoutes);
+app.use("/transation", transationRoutes);

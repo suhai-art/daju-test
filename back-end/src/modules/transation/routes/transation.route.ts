@@ -5,7 +5,7 @@ import { AppDataSource } from "../../../database/data-source";
 import { TransactionEntity } from "../entity/transition.entity";
 
 
-const salesRoutes = Router();
+const transationRoutes = Router();
 
 const transationService = new TransationService(
     AppDataSource.getRepository(TransactionEntity)
@@ -13,6 +13,6 @@ const transationService = new TransationService(
 
 const transationController = new TransationController(transationService);
 
-salesRoutes.get("/", transationController.list);
+transationRoutes.get("/", transationController.list);
 
-export default salesRoutes;
+export default transationRoutes;

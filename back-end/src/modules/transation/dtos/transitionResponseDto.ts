@@ -1,12 +1,14 @@
-export interface TransitionResponseDto {
+export interface TransationResponseDto {
     invoice: number;
-    transaction: {
-        sale: TransitionItemResponseDto | null;
-        refund: TransitionItemResponseDto | null;
-    };
+    transaction: TransationDto;
 }
 
-export interface TransitionItemResponseDto {
+export interface TransationDto {
+    sale: TransationItemResponseDto | null;
+    refund: TransationItemResponseDto | null;
+}
+
+export interface TransationItemResponseDto {
     product: number;
     company: number;
     value: number;
