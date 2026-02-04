@@ -8,24 +8,24 @@ import {
 @Entity("transactions")
 export class TransactionEntity {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column({ name: "nr_dctoorigem", type: "integer" })
-    invoice: number;
+    invoice!: number;
 
     @Column({ name: "cd_produto", type: "integer" })
-    product: number;
+    product!: number;
 
     @Column({ name: "cd_empresa", type: "integer" })
-    company: number;
+    company!: number;
 
     @Column({ name: "round", type: "decimal", precision: 10, scale: 2 })
-    value: number;
+    value!: number;
 
     @Column({
         name: "in_estorno",
         type: "boolean",
         default: false
     })
-    isReversal: boolean;
+    isReversal!: boolean;
 }

@@ -141,14 +141,14 @@ export function TransactionsTable({ data }: TransactionsTableProps) {
                                             <TableCell className="font-medium">#{item.invoice}</TableCell>
                                             <TableCell>
                                                 <Badge variant="outline">
-                                                    Empresa {item.transaction.sale?.company}
+                                                    Empresa {item.transaction.sale?.company || item.transaction.refund?.company}
                                                 </Badge>
                                             </TableCell>
                                             <TableCell className="font-mono text-sm">
-                                                {item.transaction.sale?.product}
+                                                {item.transaction.sale?.product || item.transaction.refund?.product}
                                             </TableCell>
                                             <TableCell className="font-medium">
-                                                {formatCurrency(item.transaction.sale?.value || 0)}
+                                                {formatCurrency(item.transaction.sale?.value || item.transaction.refund?.value || 0)}
                                             </TableCell>
                                             <TableCell>
                                                 {item.transaction.sale && (

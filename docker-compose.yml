@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: ./back-end
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+    container_name: daju-backend
+    restart: always
+
+  frontend:
+    build:
+      context: ./front-end
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:3001
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:3001
+    depends_on:
+      - backend
+    container_name: daju-frontend
+    restart: always
